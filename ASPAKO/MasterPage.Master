@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="ASPAKO.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="CSS.css" rel="stylesheet" />
+    <style type="text/css">
+        .container{
+            margin:0 auto;
+        }
+        .auto-style8 {
+            margin-left: 3px;
+        }
+        .auto-style10 {
+            margin-left: 0px;
+        }
+        .auto-style11 {
+            margin-left: 107px;
+        }
+        .auto-style12 {
+            width: 113px;
+        }
+        .auto-style13 {
+            width: 197px;
+        }
+        .auto-style15 {
+            width: 300px;
+        }
+        .auto-style16 {
+            width: 188px;
+            height: 26px;
+        }
+        .auto-style17 {
+            width: 197px;
+            height: 26px;
+        }
+        .auto-style19 {
+            margin-left: 1px;
+        }
+        .auto-style20 {
+            width: 188px;
+        }
+        .auto-style21 {
+            float: left;
+            width: 925px;
+            height: 610px;
+            background-color: lightgray;
+        }
+        .auto-style22 {
+            float: left;
+            height: 120px;
+            width: 921px;
+            margin-bottom: 10px;
+            background-color: lightblue;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container" style="width:1250px; height:auto">
+            <div class="logo"> <asp:ImageButton ID="ImageButton1" runat="server" Height="117px" ImageUrl="~/Resim/logo.jpg" Width="300px" PostBackUrl="~/Default.aspx" /></div>
+            <div class="auto-style22">
+                <table>
+                    <tr>
+                        <td><asp:LinkButton ID="LinkBtnAnasayfa" runat="server" PostBackUrl="~/Default.aspx">Anasayfa</asp:LinkButton></td>
+                        <td><asp:LinkButton ID="LinkBtnmisyon" runat="server" PostBackUrl="~/Default.aspx">Misyon</asp:LinkButton></td>
+                        <td ><asp:LinkButton ID="LinkBtniletisim" runat="server" PostBackUrl="~/Default.aspx">İletişim</asp:LinkButton></td>
+                        <td ><asp:LinkButton ID="lnkbtnadmnekle" runat="server"  OnClick="lnkbtnadmnekle_Click">Admin kaydı</asp:LinkButton></td>
+                        <td ><asp:LinkButton ID="lnkbtnaracekle" runat="server" PostBackUrl="~/AracEkle.aspx">Araç Ekle</asp:LinkButton></td>
+                        <td ><asp:LinkButton ID="lnkaracguncelle" runat="server" PostBackUrl="~/AracGuncelle.aspx">Arac Güncelle</asp:LinkButton></td>
+                        <td> <asp:LinkButton ID="lnkbtnarackirala" runat="server" PostBackUrl="~/AracKirala.aspx">Arac Kirala</asp:LinkButton></td>
+                        <td> <asp:LinkButton ID="lnkbtnuyeguncelle" runat="server" PostBackUrl="~/UyeGuncelle.aspx">Uye Guncelle</asp:LinkButton></td>
+                        <td> <asp:LinkButton ID="lnkbtnsatislar" runat="server" PostBackUrl="~/Kiralamalar.aspx">Satislar</asp:LinkButton></td>
+                        <td> <asp:LinkButton ID="lnkbtnkiraladıgınaraclar" runat="server" PostBackUrl="~/KiraladıgınAraclar.aspx">Kiraladığın Araclar</asp:LinkButton></td>
+                        <td> <asp:LinkButton ID="lnkbtnmusaitaraclar" runat="server" PostBackUrl="~/MusaitAraclar.aspx">Musait Araçlar</asp:LinkButton></td>
+                        <td> <asp:LinkButton ID="lnkbtnkirasuresiuzat" runat="server" PostBackUrl="~/KiraSuresiUzat.aspx">Kira Süresi Uzat</asp:LinkButton></td>
+                        <td> <asp:LinkButton ID="lnkbtnmusteriler" runat="server" PostBackUrl="~/Musteriler.aspx">Müşteriler</asp:LinkButton></td>
+                        <td> <asp:LinkButton ID="lnkbtnkiradaolanarac" runat="server" PostBackUrl="~/KiradaOlanAraçlar.aspx">Kirada Olan Araçlar</asp:LinkButton></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="sol">
+                <div class="giris">
+                    <asp:Panel ID="pnlgiris" runat="server">
+                        <table class="auto-style15">
+                            <tr>
+                                <td class="auto-style16">Eposta Adresi:</td>
+                                <td class="auto-style17"><asp:TextBox ID="txtepsadres" runat="server" Width="163px" CssClass="auto-style19"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style20">Şifre:</td>
+                                <td class="auto-style13"><asp:TextBox ID="txtparola" runat="server" Width="163px"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style20"></td>
+                                <td class="auto-style13"></td>
+                            </tr>
+                            </table>
+                        <table>
+                            <tr>
+                                <td class="auto-style12"><asp:Button ID="btnuye" runat="server" Text="Üye Ol"  Height="37px" Width="88px" OnClick="btnuye_Click" CssClass="auto-style11"  /></td>
+                                <td><asp:Button ID="btngiris" runat="server" Text="Giriş"  Height="37px" Width="82px" CssClass="auto-style10" OnClick="btngiris_Click"  /></td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                    <br />
+                    <asp:Label ID="lblkarsilama" runat="server" Text="Label" CssClass="auto-style8"></asp:Label>
+                    
+                    <br />
+                    <asp:Panel ID="pnlcikis" runat="server">
+                        <asp:Button ID="btncikis" runat="server" Height="37px" Width="79px" Text="Çıkış" CssClass="auto-style8" OnClick="btncikis_Click"  />
+                    </asp:Panel>
+                </div>
+                <div class="panel">               
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="auto-style21"> 
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            </asp:ContentPlaceHolder>
+            </div>
+           <%-- <div class="alt"> Theodore IV</div>--%>
+        </div>
+        <%--            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>--%>
+    </form>
+</body>
+</html>

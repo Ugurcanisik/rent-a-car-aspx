@@ -1,0 +1,59 @@
+﻿.logo {
+    float: left;
+    width: 300px;
+    height: 120px;
+    
+    margin-right: 25px;
+    margin-bottom: 10px;
+}
+
+.üst {
+    float: left;
+    height: 120px;
+    width: 900px;
+    margin-bottom: 10px;
+    background-color:lightblue
+}
+
+.sol {
+    float: left;
+    width: 300px;
+    margin: 0 auto;
+    margin-right: 25px;
+    height: 610px;
+}
+
+.giris {
+    float: left;
+    width: 300px;
+    height: 200px;
+    background-color: lightcyan;
+}
+
+.panel {
+    float: left;
+    width: 300px;
+    height: 400px;
+    background-color: lightsteelblue;
+    margin-top: 10px;
+}
+
+.icana {
+    float: left;
+    width: 900px;
+    height: 610px;
+    background-color: lightgray;
+}
+
+.alt {
+    float: left;
+    background-color: #de3838;
+    height: 20px;
+    width: 1225px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container{
+    margin:0 auto;
+}
